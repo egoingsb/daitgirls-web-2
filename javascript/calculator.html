@@ -39,6 +39,28 @@
         ">
         =
         <input id="result" type="text" >
-
+        <hr>
+        <script>
+            function minus(){
+                // 이 웹페이지에 있는 l2의 value 값과 
+                좌항 = document.querySelector('#l3').value;
+                // 이 웹페이지에 있는 r2의 value 값을 
+                우항 = document.querySelector('#r3').value;
+                // 더한다. 
+                // 그 결과를 result의 value로 적용한다. 
+                결과 = Number(좌항) - Number(우항);
+                document.querySelector('#result3').value = 결과;    
+            }
+        </script>
+        <input id="l3" type="text" placeholder="left" onchange="
+        minus();
+    ">
+    -
+    <input id="r3" type="text" placeholder="right" onchange="
+        minus();
+    ">
+    
+    =
+    <input id="result3" type="text" >
     </body>
 </html>
