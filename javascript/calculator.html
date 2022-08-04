@@ -1,16 +1,44 @@
 <html>
     <body>
         <h1>덧셈기</h1>
-        <style>
-            input {
-                font-size:10rem;
-                width:300px;
-            }
-        </style>
         <input type="button" value="+" onclick="
             left = Number(prompt('left?'));
             right = Number(prompt('right?'));
             alert(left+right);
         ">
+        <hr>
+        <input id="l" type="text" placeholder="left">
+        +
+        <input id="r" type="text" placeholder="right">
+        <input type="button" value="=" onclick="
+            let 좌항 = document.querySelector('#l').value;
+            let 우항 = document.querySelector('#r').value;
+            alert(Number(좌항)+Number(우항));
+        ">
+        <hr>
+        <input id="l2" type="text" placeholder="left" onchange="
+            // 이 웹페이지에 있는 l2의 value 값과 
+            좌항 = document.querySelector('#l2').value;
+            // 이 웹페이지에 있는 r2의 value 값을 
+            우항 = document.querySelector('#r2').value;
+            // 더한다. 
+            // 그 결과를 result의 value로 적용한다. 
+            결과 = Number(좌항) + Number(우항);
+            document.querySelector('#result').value = 결과;
+        ">
+        +
+        <input id="r2" type="text" value="20" placeholder="right" onchange="
+            // 이 웹페이지에 있는 l2의 value 값과 
+            좌항 = document.querySelector('#l2').value;
+            // 이 웹페이지에 있는 r2의 value 값을 
+            우항 = document.querySelector('#r2').value;
+            // 더한다. 
+            // 그 결과를 result의 value로 적용한다. 
+            결과 = Number(좌항) + Number(우항);
+            document.querySelector('#result').value = 결과;
+        ">
+        =
+        <input id="result" type="text" >
+
     </body>
 </html>
